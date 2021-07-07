@@ -5,11 +5,11 @@ module.exports = {
     aliases: ['s', 'talk'],
     category : 'fun',
     run : async (client, message, args) =>{
-             if(!args[0]) return message.channel.send('Vui lòng nhập gì đó để bot nói!');
+             if(!args[0]) return message.channel.send('Đéo ghi nói gì thì tao nói cái lồn gì!');
              const string = args.join('');
-             if(string.length > 200 ) return message.channel.send('Vui lòng nhập dưới 200 ký tự!');
+             if(string.length > 50 ) return message.channel.send('Địt mẹ mày nhập dưới 50 ký tự thôi!');
              const voiceChannel = message.member.voice.channel;
-             if(!voiceChannel) return message.reply('Bạn phải vào room voice để sử dụng lệnh này!');
+             if(!voiceChannel) return message.reply('Mày phải vào room voice thì mới nghe được chứ @@');
              const audioURL  = await getAudioUrl(string,{
                  lang : 'vi',
                  slow : false,
@@ -25,7 +25,7 @@ module.exports = {
                  }); 
              }
              catch(e){
-                 message.channel.send('Bot lỗi');
+                 message.channel.send('Bot chết');
                  console.error(e);
              };
     },

@@ -5,7 +5,7 @@ client.on("ready",() =>{
     console.log(`${client.user.username} da san sang hoat dong`);
     client.user.setPresence({
         activity:{
-            name : "alo alo",
+            name : "VALORANT",
             type : 'PLAYING'
         },
         status : 'online'

@@ -3,6 +3,6 @@ module.exports = {
   category : 'user',
   aliases : ['p'],
   run: (client, message, args) =>{
-    message.channel.send(` the ping is :${client.ws.ping} ms `)
+    message.channel.send(` Ping là :${client.ws.ping} ms `)
   }
 }
